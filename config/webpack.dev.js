@@ -41,7 +41,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js?$/,
-      loader: 'react-hot-loader',
+      loader: 'react-hot-loader/webpack',
       exclude: /(node_modules|build)/
     }, {
       test: /\.scss$/,

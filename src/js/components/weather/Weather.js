@@ -1,35 +1,34 @@
 //Vendor
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {compose} from 'recompose';
+import { Field, reduxForm } from 'redux-form';
 //Locals
-import {weatherStore} from 'js/components/weather/WeatherStore';
-import {weatherActions} from 'js/components/weather/WeatherActions';
+import {getWeather} from 'js/components/weather/WeatherActions';
 
-import {getApiData} from 'js/utils/api';
-import {viewOptions} from 'js/config';
-
-export default class Body extends Component {
-  constructor(props){
-		super(props);
-		this.state = weatherStore.getState();
-		weatherStore.listen(this.storeDidUpdate.bind(this));
-	}
-
-  /*
-    get api data when the component mounts
-  */
-  componentDidMount() {
-    // Subscribe to the store for updates
-    weatherActions.initialize(); //initialize store
-  }
-
-  storeDidUpdate = () => {
-    this.setState(weatherStore.getState());//triggers re-render when store updates
+class Weather extends Component {
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.getWeather();
+    this.props.handleSubmit((formValues) => {
+      console.log(formValues);
+    })();
   }
 
   render () {
 
     return (
-      <div>App</div>
+      <form onSubmit={this.handleSubmit}>
+        <Field component="input" placeholder="Min Temp" name="minTemp" /><br />
+        <Field component="input" placeholder="Max Temp" name="maxTemp" /><br />
+        <Field component="input" placeholder="Max Rain Percentage" name="maxRainChance" />
+        <button type="submit">submit</button>
+      </form>
     );
   }
 }
+
+export default compose(
+  reduxForm({form: 'weather'}),
+  connect(null, getWeather)
+)(Weather);

@@ -1,8 +1,8 @@
-import {urls} from 'js/config';
+import {testUrl} from 'js/config';
 
-let fetchApiData = (appId) => {
+let fetchApiData = () => {
   let invocation = new XMLHttpRequest();
-  invocation.open('GET', urls.itemInfo(appId), true);
+  invocation.open('GET', testUrl, true);
   invocation.send();
 
   return invocation;
@@ -10,9 +10,9 @@ let fetchApiData = (appId) => {
 /**
 * @param {string} appId - API Id or to get info about
 */
-export let getApiData = (apiId) => {
+export let getApiData = () => {
 
-    let invocation = fetchApiData(apiId)
+    let invocation = fetchApiData()
 
     return invocation;
 }

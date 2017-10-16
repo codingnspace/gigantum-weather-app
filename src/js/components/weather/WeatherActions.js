@@ -1,10 +1,18 @@
-import {dispatcher} from 'js/dispatcher';
+import {getApiData} from 'js/utils/api';
+import {testUrl} from 'js/config';
 
-class WeatherActions {
-	//actions passes off data to the store
-	initialize(){
-		return null
-	}
-
+export function getWeather() {
+  return (dispatch, getState) => {
+    // const something = api();
+    fetch(testUrl)
+    .then((response) => {
+      return response.json();
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  };
 }
-export const weatherActions = dispatcher.createActions(WeatherActions);

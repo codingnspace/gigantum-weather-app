@@ -1,20 +1,15 @@
-/*eslint-disable */
-import {weatherActions} from 'js/components/weather/WeatherActions';
-import {dispatcher} from 'js/dispatcher';
+import {weatherReducer} from 'js/components/weather/WeatherReducer';
+import { combineReducers, createStore } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import {compose} from 'recompose';
 
-class WeatherStore {
-	constructor () {
-    this.init = false
+const rootReducer = combineReducers({
+  form: formReducer,
+  weatherReducer
+});
 
-		this.bindListeners({
-			initialize: weatherActions.initialize
-		});
-	}
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+);
 
-	initialize(){
-    this.init = true;
-	}
-}
-
-
-export const weatherStore = dispatcher.createStore(WeatherStore, 'WeatherStore');
+export const weatherStore = createStore(rootReducer, {}, enhancers);

@@ -7,7 +7,7 @@ import { decideCommuteForDay } from 'js/components/weather/WeatherActions';
 const middlewares = [ thunk ];
 const mockStore = configureMockStore(middlewares);
 
-// This is not yet working due to needing to link
+// This is not yet working
 describe('decideCommuteForDay action', () => {
 
   it('calls request and success actions if the fetch response was successful', () => {

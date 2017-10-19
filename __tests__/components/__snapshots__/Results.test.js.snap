@@ -20,14 +20,13 @@ exports[`Results should render correctly 1`] = `
       className="result-img"
     >
       <img
-        alt="app-logo"
-        className="app-logzzo"
+        alt="metro_img"
         src={Object {}}
       />
     </div>
   </div>
   <div
-    className="start-over-btn"
+    className="btn-wrapper"
   >
     <button
       onClick={[Function]}

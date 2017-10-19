@@ -27,31 +27,3 @@ exports[`DisplaySwitcher should display the WeatherForm component when results p
   />
 </div>
 `;
-
-exports[`DisplaySwitcher should render correctly 1`] = `
-<div
-  className="display-switcher"
->
-  <Results
-    results={
-      Array [
-        Object {
-          "day": "Monday",
-          "decision": "metro",
-          "idx": 0,
-        },
-      ]
-    }
-  />
-</div>
-`;
-
-exports[`DisplaySwitcher should render correctly 2`] = `
-<div
-  className="display-switcher"
->
-  <ReduxForm
-    getWeather={[Function]}
-  />
-</div>
-`;

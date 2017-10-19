@@ -10,7 +10,7 @@ import React from 'react';
 */
 describe('Header snapshot Tests', () => {
 
-  test('Sample of snapshot testing, not very useful, but shows how to do it', () => {
+  test('should render correctly', () => {
     const header = renderer.create(
       <Header/>
     );

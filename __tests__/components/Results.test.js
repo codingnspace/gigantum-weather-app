@@ -8,6 +8,7 @@ import Adapter from 'enzyme-adapter-react-15';
 configure({adapter: new Adapter()});
 
 describe('Results', () => {
+
   it('should render correctly', () => {
     const results = [{
       idx: 0,
@@ -19,4 +20,5 @@ describe('Results', () => {
     );
     expect(shallowToJson(output)).toMatchSnapshot();
   });
+
 });

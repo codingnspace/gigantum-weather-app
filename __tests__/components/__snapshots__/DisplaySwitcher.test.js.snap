@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplaySwitcher should display the Results component when results prop array has more than 0 items 1`] = `
+<div
+  className="display-switcher"
+>
+  <Results
+    results={
+      Array [
+        Object {
+          "day": "Monday",
+          "decision": "metro",
+          "idx": 0,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`DisplaySwitcher should display the WeatherForm component when results prop array has 0 items 1`] = `
+<div
+  className="display-switcher"
+>
+  <ReduxForm
+    getWeather={[Function]}
+  />
+</div>
+`;
+
+exports[`DisplaySwitcher should render correctly 1`] = `
+<div
+  className="display-switcher"
+>
+  <Results
+    results={
+      Array [
+        Object {
+          "day": "Monday",
+          "decision": "metro",
+          "idx": 0,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`DisplaySwitcher should render correctly 2`] = `
+<div
+  className="display-switcher"
+>
+  <ReduxForm
+    getWeather={[Function]}
+  />
+</div>
+`;

@@ -2,7 +2,7 @@ import moment from 'moment';
 const latitude = 38.9072;
 const longitude = 77.0369;
 
-export const baseApiUrl = `https://1miudhz7a9.execute-api.us-east-1.amazonaws.com/dev/forecast/${latitude},${longitude},`;
+export const baseApiUrl = `https://1miudhz7a9.execute-api.us-east-1.amazonaws.com/dev/forecast/${latitude},${longitude}`;
 export const buildApiUrl = (time) => `${baseApiUrl},${time}`;
 
 export const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

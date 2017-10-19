@@ -1,11 +1,17 @@
 //Vendor
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 //Locals
 import temperature from 'images/temperature.svg';
 import percent from 'images/percent.svg';
 
 class WeatherForm extends Component {
+  static propTypes = {
+    handleSubmit: PropTypes.func,
+    getWheather: PropTypes.func
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.handleSubmit((formValues) => {
@@ -30,7 +36,7 @@ class WeatherForm extends Component {
               <Field component="input" placeholder="Max Rain Percentage" name="maxRain" />
               <img className="app-logzzo" src={percent} alt="app-logo" />
             </div>
-            <div className="get-info-btn">
+            <div className="btn-wrapper">
               <button type="submit">Get Info</button>
             </div>
         </form>

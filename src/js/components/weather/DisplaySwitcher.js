@@ -1,5 +1,6 @@
 //Vendor
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {sortBy} from 'lodash';
 //Locals
@@ -8,6 +9,12 @@ import Results from './Results';
 import {getWeather, resetDecision} from 'js/components/weather/WeatherActions';
 
 class DisplaySwitcher extends Component {
+  static propTypes ={
+    getWheather: PropTypes.func,
+    results: PropTypes.array,
+    resetDecision: PropTypes.func
+  }
+
   render () {
     const {results} = this.props;
     let display;
@@ -29,6 +36,7 @@ function mapStateToProps(state) {
     results: sortBy(state.weatherReducer, 'idx')
   };
 }
+export const DisconnectedDisplaySwiter = DisplaySwitcher;
 export default connect(mapStateToProps, {
   getWeather,
   resetDecision

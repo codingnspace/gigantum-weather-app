@@ -1,10 +1,11 @@
-# Gigantum React Starter Kit
+# DC Metro or Bike Commute App
 
 ### Getting started
 This project requires [Node.js](https://nodejs.org/en/)
 
 1. Install dependencies: `npm install`
 2. `npm start`
+3. Navigate to [localhost:3000](http://localhost:3000/)
 
 ### NPM scripts
 `npm start`
@@ -70,6 +71,8 @@ Now your running HTTP/2 with automatic HTTPS enabled!! This does not do hot modu
 * [React](https://facebook.github.io/react/)
 * [Redux](http://redux.js.org/)
 * [Flow](http://flowtype.org/)
+* [React-Redux](http://redux.js.org/docs/basics/UsageWithReact.html)
+* [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 * [Webpack](https://webpack.github.io/)
 * [Jest](https://facebook.github.io/jest/)
 * [Enzyme](http://airbnb.io/enzyme/)

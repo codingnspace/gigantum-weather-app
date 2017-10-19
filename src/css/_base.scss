@@ -24,6 +24,32 @@ ol, ul {
   margin: 0;
 }
 
+h2 {
+  color: white;
+  font-style: italic;
+  margin: .5em auto;
+  width: 80%;
+}
+
+button {
+  background-color: $orange-accent-color;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 1em;
+  width: 100%;
+}
+
+button:hover {
+  background-color: $dark-orange;
+}
+
+.btn-wrapper {
+  margin: auto;
+  width: 50%;
+}
+
 // Atomic Classes
 .hidden {
   display: none;

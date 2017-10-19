@@ -30,35 +30,9 @@
   width: 20px;
 }
 
-.get-info-btn {
-  margin: auto;
-  width: 50%;
-}
-
-.get-info-btn button {
-  background-color: $orange-accent-color;
-  border: none;
-  color: white;
-  cursor: pointer;
-  height: 40px;
-  margin-top: 1em;
-  width: 100%;
-}
-
-.get-info-btn button:hover {
-  background-color: $dark-orange;
-}
-
 .weather-form-container {
   margin-left: auto;
   margin-right: auto;
   margin-top: 22.5px;
   width: 70%;
-}
-
-.weather-form-container h2 {
-  color: white;
-  font-style: italic;
-  margin: .5em auto;
-  width: 80%;
 }

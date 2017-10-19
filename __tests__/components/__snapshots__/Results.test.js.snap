@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results should render correctly 1`] = `
+<div
+  className="result-list"
+>
+  <h2>
+    Your Results Are In...
+  </h2>
+  <div
+    className="result"
+    key="0"
+  >
+    <div
+      className="result-day-text"
+    >
+      Today
+    </div>
+    <div
+      className="result-img"
+    >
+      <img
+        alt="app-logo"
+        className="app-logzzo"
+        src={Object {}}
+      />
+    </div>
+  </div>
+  <div
+    className="start-over-btn"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Start Over
+    </button>
+  </div>
+</div>
+`;

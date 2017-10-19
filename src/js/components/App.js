@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 //Components
 import Header from 'js/components/Header';
-import Weather from 'js/components/weather/Weather';
+import DisplaySwitcher from 'js/components/weather/DisplaySwitcher';
 
 export default class App extends Component {
   displayName: 'App';
@@ -10,8 +10,8 @@ export default class App extends Component {
   render () {
     return (
         <div className='root'>
-          <Header title="Gigantum" subtitle="lorem ipsum blah blah blah" />
-          <Weather />
+          <Header title="Should I Bike Or Metro?" subtitle="A Very Cool App for the DC Metro Area" />
+          <DisplaySwitcher />
         </div>
 
     );

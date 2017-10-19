@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import logoImg from 'images/bicycle.svg';
+import bike from 'images/bicycle.svg';
+import metro from 'images/metro.svg';
 
 export default class Header extends Component {
   displayName: 'Header';
@@ -9,9 +10,10 @@ export default class Header extends Component {
 
     return (
       <div className='app-header relative'>
+        <img className="app-logo-left" src={bike} alt="app-logo" />
         <h1 className='app-title text-center'>{title}</h1>
         <h3 className='app-subtitle text-center'>{subtitle}</h3>
-        <img className="app-logo" src={logoImg} alt="app-logo" />
+        <img className="app-logo-right" src={metro} alt="app-logo" />
       </div>
     );
   }

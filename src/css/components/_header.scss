@@ -1,15 +1,16 @@
 .app-header {
-  background-color: $theme-header;
-  justify-content: center;
+  background-color: white;
+  border-bottom: 3px solid $orange-accent-color;
+  color: $dark-teal;
   flex-direction: column;
   display: flex;
-  color: white;
+  justify-content: center;
   height: 100px;
+  left: 0;
+  min-height: 80px;
+  top: 0;
   width: 100%;
   z-index: 5;
-  left: 0;
-  top: 0;
-  min-height: 80px;
 }
 
 .app-title, .app-subtitle {
@@ -26,10 +27,17 @@
   font-size: 12px;
 }
 
-.app-logo {
+.app-logo-right {
   position: absolute;
   width: 80px;
-  right: 10px;
+  right: 20px;
+  top: 10px;
+}
+
+.app-logo-left {
+  position: absolute;
+  width: 80px;
+  left: 20px;
   top: 10px;
 }
 

@@ -1,8 +1,10 @@
 // import Immutable from 'immutable';
-export const weatherReducer = (state = {}, action) => {
+export const weatherReducer = (state = [], action) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
-      return action.filter;
+    case 'STORE_DECISION':
+      return state.concat([action.result]);
+    case 'RESET_DECISION':
+      return [];
     default:
       return state;
   }

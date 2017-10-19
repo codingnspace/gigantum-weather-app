@@ -4,12 +4,20 @@ exports[`Header snapshot Tests Sample of snapshot testing, not very useful, but 
 <div
   className="app-header relative"
 >
+  <img
+    alt="app-logo"
+    className="app-logo-left"
+    src={Object {}}
+  />
   <h1
     className="app-title text-center"
   />
+  <h3
+    className="app-subtitle text-center"
+  />
   <img
     alt="app-logo"
-    className="app-logo"
+    className="app-logo-right"
     src={Object {}}
   />
 </div>

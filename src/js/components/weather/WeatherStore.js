@@ -1,6 +1,7 @@
 import {weatherReducer} from 'js/components/weather/WeatherReducer';
-import { combineReducers, createStore } from 'redux';
-import { reducer as formReducer } from 'redux-form';
+import {combineReducers, createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import {reducer as formReducer} from 'redux-form';
 import {compose} from 'recompose';
 
 const rootReducer = combineReducers({
@@ -9,6 +10,7 @@ const rootReducer = combineReducers({
 });
 
 const enhancers = compose(
+  applyMiddleware(thunk),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
